@@ -118,6 +118,11 @@ tracehelper2 (R : cs) stack ((x, y), facing) lines ang colour = let (_, newfacin
                                                                 in tracehelper2 cs stack ((x, y), newfacing) lines ang colour
 tracehelper2 (B cmds : cs) stack state lines ang colour = tracehelper2 cs ((state, cmds) : stack) state lines ang colour
 
+--I do not think I did trace1 and trace2 right but somehow to run cabal test gives no output for the project so I couldn't really debug
+--Also calling drawLSystem1 leads to *** Exception: user error (unknown GLUT entry glutInit) on my windows laptop and I have no idea how to solve that either
+--so I couldn't do the extension stuff
+--(and it might be reasonable not to do them since I couldn't even run a test on the basic project)
+
 
 -- Provided Functions
 ------------------------------------------------------------------------------
